@@ -80,25 +80,29 @@ from functools import reduce
 # ])
 
 
-from math import pi
+# from math import pi
+#
+# class Circle:
+#     def __init__(self,radius):
+#         self.area = None
+#         self.perimeter = None
+#         self.radius = radius
+#
+#     def get_perimeter(self):
+#         self.perimeter = 2 * pi * self.radius
+#
+#     def get_area(self):
+#         self.area = pi * self.radius * self.radius
+#
+# c1 = Circle(5)
+# c1.get_perimeter()
+# c1.get_area()
+# print(c1.perimeter)
+# print(c1.area)
 
-class Circle:
-    def __init__(self,radius):
-        self.area = None
-        self.perimeter = None
-        self.radius = radius
 
-    def get_perimeter(self):
-        self.perimeter = 2 * pi * self.radius
 
-    def get_area(self):
-        self.area = pi * self.radius * self.radius
 
-c1 = Circle(5)
-c1.get_perimeter()
-c1.get_area()
-print(c1.perimeter)
-print(c1.area)
 
 
 
