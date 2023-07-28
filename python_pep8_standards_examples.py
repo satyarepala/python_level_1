@@ -109,4 +109,32 @@ result = (
 # 18. Use single blank lines sparingly to group related lines of code.
 import os
 
+# 19. doc string format for class
+class ExampleClass:
+    """This is a brief description of the ExampleClass.
+
+    This docstring provides more detailed information about the class.
+    You can use multiple lines to describe the purpose, attributes,
+    methods, and other relevant details of the class.
+
+    Attributes:
+        attribute1 (type): Description of attribute1.
+        attribute2 (type): Description of attribute2.
+
+    Methods:
+        method1(param1, param2): Description of method1.
+        method2(param): Description of method2.
+
+    Examples:
+        You can include usage examples or sample code snippets here
+        to demonstrate how to use the class and its methods.
+        Example:
+        ```
+        obj = ExampleClass()
+        result = obj.method1(10, 20)
+        print(result)
+        ```
+    """
+    # Class implementation goes here...
+
 # Main code starts here...
