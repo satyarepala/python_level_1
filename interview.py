@@ -102,7 +102,13 @@ from functools import reduce
 
 
 
+import re
 
+text = "Contact us at +1 (555) 123-4567 or +91 9876543210."
+# Regular expression to match phone numbers in the format: +X (XXX) XXX-XXXX or +XX XXXXXXXXXX
+pattern = r"\+\d{1,2}\s?\(\d{3}\)\s?\d{3}-\d{4}|\+\d{2}\s?\d{10}"
+phone_numbers = re.findall(pattern, text)
+print("Phone Numbers:", phone_numbers)
 
 
 
