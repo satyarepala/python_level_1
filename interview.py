@@ -1,122 +1,93 @@
-
-users_info = {
-    "akash": {
-        "age": 25,
-        "gender": "male",
-        "income": 50000,
-        "tax": 0.10,
-        "purchase_history": (2000, 3000, 5000, 3500)
-    },
-    "harsha": {
-        "age": 27,
-        "gender": "male",
-        "income": 70000,
-        "tax": 0.08,
-        "purchase_history": (200, 350, 5200, 2500)
-    },
-    "renuka": {
-        "age": 22,
-        "gender": "female",
-        "income": 25000,
-        "tax": 0.02,
-        "purchase_history": (220, 3400, 110, 54)
-    },
-    "gayatri": {
-        "age": 27,
-        "gender": "female",
-        "income": 80000,
-        "tax": 0.12,
-        "purchase_history": (200, 350, 42000, 210)
-    },
-}
-
-# for key,value in users_info.items():
-#     print(key)
-#     print(value["purchase_history"])
-#     print("--------------------------------------------")
-#
-from functools import reduce
+import os
+import time
 
 
-# calculate sum of all elements of nested list
-
-# my_list = [[1,2,3],[4,5,6],[7,8,9]]
-# total_sum = 0
-#
-# for i in my_list:
-#     print(i)
-#     print(sum(i))
-#     total_sum = sum(i) + total_sum
-
-# generate fibonoccie series
-# 0,1,1,2,3,5,8,13
-
-# def fibonoccie(n):
-#     fibonoccie_series = [0 ,1]
-#     for i in range(n):
-#         fibonoccie_series.append(sum(fibonoccie_series[-2:]))
-#     print(fibonoccie_series ,n)
-#     return n
-# users_info = \
-#     {"ashok": {"n": 10},
-#     "akash": {"n": 20}
-# }
-#
-# for key,value in users_info.items():
-#     print(fibonoccie(value["n"]))
-
-# print(sum(my_list[0]))
-# print(sum(my_list[1]))
-# print(sum(my_list[::]))
+def addition():
+    nums = list(map(int, input("Enter all numbers seperated by space: ").split()))
+    return sum(nums)
 
 
-# for i in my_list:
+def subtraction():
+    n1 = float(input("Enter first number: "))
+    n2 = float(input("Enter second number: "))
+
+    return n1 - n2
 
 
-# n = len(purchase_history)
-# middle_index = ceil(n/2)
-# print(middle_index)
-# print(purchase_history[middle_index-1
-# ])
+def multiplication():
+    nums = list(map(int, input("Enter all numbers seperated by space: ").split()))
+    res = 1
+    for num in nums:
+        res *= num
+    return res
 
 
-# from math import pi
-#
-# class Circle:
-#     def __init__(self,radius):
-#         self.area = None
-#         self.perimeter = None
-#         self.radius = radius
-#
-#     def get_perimeter(self):
-#         self.perimeter = 2 * pi * self.radius
-#
-#     def get_area(self):
-#         self.area = pi * self.radius * self.radius
-#
-# c1 = Circle(5)
-# c1.get_perimeter()
-# c1.get_area()
-# print(c1.perimeter)
-# print(c1.area)
+def division():
+    n1 = float(input("Enter first number: "))
+    n2 = float(input("Enter second number: "))
+
+    return n1 / n2
 
 
-
-import re
-
-text = "Contact us at +1 (555) 123-4567 or +91 9876543210."
-# Regular expression to match phone numbers in the format: +X (XXX) XXX-XXXX or +XX XXXXXXXXXX
-pattern = r"\+\d{1,2}\s?\(\d{3}\)\s?\d{3}-\d{4}|\+\d{2}\s?\d{10}"
-phone_numbers = re.findall(pattern, text)
-print("Phone Numbers:", phone_numbers)
+def average():
+    nums = list(map(int, input("Enter all numbers seperated by space: ").split()))
+    return sum(nums) / len(nums)
 
 
+c = 0
+while c != "-1":
+    print("Enter '1' for addition")
+    print("Enter '2' for subtraction")
+    print("Enter '3' for multiplication")
+    print("Enter '4' for division")
+    print("Enter '5' for average")
+    print("Enter '-1' to exit.\n")
 
+    c = input("Your choice is: ")
 
+    if c == "1":
+        res = addition()
+        os.system("cls")
+        print(f"The answer is {res}")
+        time.sleep(2)
+        os.system("cls")
 
+    elif c == "2":
+        res = subtraction()
+        os.system("cls")
+        print(f"The answer is {res}")
+        time.sleep(2)
+        os.system("cls")
 
+    elif c == "3":
+        res = multiplication()
+        os.system("cls")
+        print(f"The answer is {res}")
+        time.sleep(2)
+        os.system("cls")
 
+    elif c == "4":
+        res = division()
+        os.system("cls")
+        print(f"The answer is {res}")
+        time.sleep(2)
+        os.system("cls")
 
+    elif c == "5":
+        res = average()
+        #os.system("cls")
+        print(f"The answer is {res}")
+        time.sleep(2)
+        #os.system("cls")
 
+    elif c == "-1":
+        os.system("cls")
+        print("Thank you for using the calculator!")
+        time.sleep(2)
+        break
 
-
+    else:
+        os.system("cls")
+        print("Sorry, invalid option!")
+        time.sleep(2)
+        os.system("cls")

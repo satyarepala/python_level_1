@@ -6,6 +6,7 @@ class MyClass:
         self._protected_var = 20
         self.__private_var = 30
 
+
     # Public Method
     def public_method(self):
         return "This is a public method."
