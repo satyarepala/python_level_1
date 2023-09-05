@@ -53,6 +53,7 @@ import random
 from collections import namedtuple
 from itertools import chain
 
+
 # 10. Put a single space after the '#' in comments.
 # This is a comment.
 
@@ -105,9 +106,6 @@ result = (
     (x + y) *
     (x - y)
 )
-
-# 18. Use single blank lines sparingly to group related lines of code.
-import os
 
 # 19. doc string format for class
 class ExampleClass:
